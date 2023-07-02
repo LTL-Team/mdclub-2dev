@@ -45,6 +45,10 @@ git clone https://github.com/zdhxiong/mdclub
 
 **安装项目依赖**
 
+在安装依赖的过程中，可能遇到报错：
+- 缺少对应的 PHP 扩展
+- PHP 版本推荐在 7.2 - 7.4 之间
+
 ```
 cd mdclub
 composer install
