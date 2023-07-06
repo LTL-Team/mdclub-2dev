@@ -7,6 +7,7 @@ namespace MDClub\Validator;
 use MDClub\Facade\Library\Auth;
 use MDClub\Facade\Library\Captcha;
 use MDClub\Facade\Library\Email as EmailLibrary;
+use MDClub\Library\Cryption;
 use MDClub\Facade\Model\UserModel;
 use MDClub\Facade\Service\UserService;
 use MDClub\Helper\Ip;
@@ -155,6 +156,16 @@ class User extends Abstracts
     }
 
     /**
+     * 邀请码的验证
+     * 
+     * @return $this
+     */
+    public function checkUserInvite(): self
+    {
+        return $this->checkInviteCode($this->data['invitecode']); // TODO: Add database invite code validation.
+    }
+
+    /**
      * 发送重置密码邮件的验证
      *
      * @param array $data [email]
@@ -178,7 +189,7 @@ class User extends Abstracts
     /**
      * 注册时的验证
      *
-     * 首先验证 email 和 email_code，若验证不通过，则不严重 username 和 password，用于前端设计注册时支持分步注册
+     * 首先验证 email 和 email_code，若验证不通过，则不验证 username 和 password，用于前端设计注册时支持分步注册
      *
      * @param array $data [email, email_code, username, password]
      *
