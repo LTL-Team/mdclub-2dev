@@ -159,7 +159,7 @@ class User extends Abstracts
     /**
      * 邀请码的验证
      * 
-     * @return $bool 验证成功返回true，否则返回false。 验证不成功将提示用户发送验证
+     * @return bool 验证成功返回true，否则返回false。 验证不成功将提示用户发送验证
      */
     public function checkUserInvite(): bool
     {
