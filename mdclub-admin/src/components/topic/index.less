@@ -1,0 +1,56 @@
+@import '../../vendor/mdui/variable.less';
+
+.mc-topic {
+  max-width: 408px;
+  min-height: 404px;
+  max-height: 95%;
+  overflow-y: auto;
+  border: none;
+
+  .mdui-card-media {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.1111%;
+  }
+
+  .actions {
+    position: absolute;
+    right: 28px;
+    bottom: -20px;
+    z-index: 99;
+
+    .to-edit,
+    .delete {
+      color: #fff;
+    }
+
+    .to-edit {
+      background-color: @primaryColor;
+    }
+
+    .delete {
+      margin-left: 16px;
+      background-color: @accentColor;
+    }
+  }
+
+  .mdui-card-primary,
+  .mdui-card-content {
+    padding: 24px;
+  }
+
+  .mdui-card-content {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .mdui-list {
+    padding: 0 0 16px;
+  }
+
+  .mdui-list-item {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}

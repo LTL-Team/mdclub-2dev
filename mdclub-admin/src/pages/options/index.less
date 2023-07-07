@@ -1,0 +1,50 @@
+@import '../../vendor/mdui/variable.less';
+
+#page-options {
+  max-width: 680px;
+  padding-top: 0;
+
+  .subheader {
+    height: 32px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  .subheader-first {
+    margin-top: 18px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .mdui-theme-layout-dark & {
+      border-bottom-color: rgba(255, 255, 255, .12);
+    }
+
+    .label {
+      width: 36%;
+    }
+
+    .value {
+      flex-grow: 1;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 16px;
+      transform: rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.less"],
+      "customSyntax": "postcss-less"
+    }
+  ],
+  "rules": {
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "selector-class-pattern": null,
+    "number-max-precision": null,
+    "font-family-name-quotes": null
+  }
+}
