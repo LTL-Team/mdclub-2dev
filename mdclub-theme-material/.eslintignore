@@ -1,0 +1,6 @@
+.github
+.idea
+.vs
+build
+node_modules
+template

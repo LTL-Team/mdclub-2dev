@@ -1,0 +1,76 @@
+@import '../../vendor/mdui/variable.less';
+
+.mc-drawer {
+  display: flex;
+  flex-direction: column;
+
+  .mdui-list {
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  .mdui-list-item {
+    padding-left: 20px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .mdui-list-item-icon {
+    transform: scale(.875);
+  }
+
+  .mdui-list-item-content {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .mdui-list-item-active {
+    color: @primaryColor;
+    background-color: #e8f0fe;
+
+    .mdui-theme-layout-dark & {
+      color: #fff;
+      background-color: @layout-dark-color-4;
+    }
+
+    .mdui-list-item-icon {
+      color: @primaryColor;
+
+      .mdui-theme-layout-dark & {
+        color: #fff;
+      }
+    }
+  }
+
+  .copyright {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 16px;
+
+    p {
+      margin: 0;
+      overflow: hidden;
+      color: rgba(0, 0, 0, 0.38);
+      font-size: 13px;
+      line-height: 20px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      .mdui-theme-layout-dark & {
+        color: rgba(255, 255, 255, .38);
+      }
+    }
+
+    a {
+      color: rgba(0, 0, 0, 0.52);
+      text-decoration: none;
+
+      .mdui-theme-layout-dark & {
+        color: rgba(255, 255, 255, .52);
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

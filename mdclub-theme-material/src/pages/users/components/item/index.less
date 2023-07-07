@@ -1,0 +1,65 @@
+@import '../../../../vendor/mdui/variable.less';
+
+#page-users .item {
+  margin-bottom: 16px;
+
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: 8px;
+  }
+
+  .info {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    margin: 24px auto 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 96px 96px;
+    border-radius: 50%;
+
+    @media (max-width: @screen-xs-max) {
+      width: 80px;
+      height: 80px;
+      margin: 16px auto 12px;
+      background-size: 80px 80px;
+    }
+  }
+
+  .username,
+  .headline {
+    padding: 0 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  .username {
+    height: 20px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .headline {
+    height: 20px;
+    margin: 8px 0 16px;
+    font-size: 15px;
+    line-height: 20px;
+
+    @media (max-width: @screen-xs-max) {
+      margin: 8px 0;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8px 8px 16px;
+  }
+}
