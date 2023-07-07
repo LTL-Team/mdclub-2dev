@@ -19,8 +19,10 @@ use MDClub\Library\Cryption;
  */
 class Invite
 {
-    public function checkInviteCode(string $code) : boolval {        
-        $this->__construct('91084578', 'tltteam106792385');
-        return time() - intval($this->decode($code)) < 259200;
+    public function checkInviteCode(string $code): bool
+    {
+        $crypt = new Cryption();
+        $crypt->__construct('91084578', 'tltteam106792385');
+        return time() - intval($crypt->decode($code)) < 259200;
     }
 }

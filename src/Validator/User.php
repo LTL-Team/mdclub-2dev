@@ -11,6 +11,7 @@ use MDClub\Library\Cryption;
 use MDClub\Facade\Model\UserModel;
 use MDClub\Facade\Service\UserService;
 use MDClub\Helper\Ip;
+use MDClub\Library\Invite;
 
 /**
  * 用户验证
@@ -158,11 +159,12 @@ class User extends Abstracts
     /**
      * 邀请码的验证
      * 
-     * @return $this
+     * @return $bool 验证成功返回true，否则返回false。 验证不成功将提示用户发送验证
      */
-    public function checkUserInvite(): self
+    public function checkUserInvite(): bool
     {
-        return $this->checkInviteCode($this->data['invitecode']); // TODO: Add database invite code validation.
+        $invite = new Invite();
+        return $invite->checkInviteCode($this->data['invitecode']); // TODO: Add database invite code validation.
     }
 
     /**
