@@ -30,11 +30,11 @@
     "forum",
     "material design"
   ],
-  "author": "zdhxiong",
+  "author": "LTL-Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zdhxiong/mdclub-theme-material/issues",
-    "email": "zdhxiong@gmail.com"
+    "url": "https://github.com/LTL-Team/mdclub-2dev/issues",
+    "email": "liearmer@gmail.com"
   },
   "dependencies": {
     "classcat": "^5.0.3",

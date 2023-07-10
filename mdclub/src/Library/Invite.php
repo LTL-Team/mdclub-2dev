@@ -19,10 +19,13 @@ use MDClub\Library\Cryption;
  */
 class Invite
 {
+    private $inviteTime = 259200; // 邀请码有效期（秒）
+    private $cryptIv = '91084578'; // 加密向量
+    private $cryptKey = 'tltteam106792385'; // 加密密钥
     public function checkInviteCode(string $code): bool
     {
         $crypt = new Cryption();
-        $crypt->__construct('91084578', 'tltteam106792385');
-        return time() - intval($crypt->decode($code)) < 259200;
+        $crypt->__construct($this->cryptIv, $this->cryptKey);
+        return time() - intval($crypt->decode($code)) < $this->inviteTime;
     }
 }

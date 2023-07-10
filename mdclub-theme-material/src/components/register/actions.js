@@ -48,6 +48,7 @@ const as = {
     $emailCode = $element.find('[name="email_code"]');
     $username = $element.find('[name="username"]');
     $password = $element.find('[name="password"]');
+    $invite = $element.find('[name="invite"]');
     $captchaCode = $element.find('[name="captcha_code"]');
 
     $element.on('open.mdui.dialog', () => {
@@ -223,6 +224,7 @@ const as = {
 
     // 没有传入 username 和 password 参数，调用接口一定会返回错误
     // 若返回字段验证失败，且不含 email 和 email_code，则表示邮箱验证通过
+    // TODO: 加入邀请码验证
     register(formData)
       .finally(() => {
         actions.setState({ verifying: false });

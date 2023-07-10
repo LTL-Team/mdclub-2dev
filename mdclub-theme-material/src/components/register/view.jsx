@@ -76,6 +76,14 @@ export default ({ state, actions }) => (
         name="password"
         onInput={actions.onInput}
       />
+      <FieldInviteCode
+        value={state.invite}
+        message={state.invite_msg}
+        label="邀请码"
+        name="invite"
+        error={state.invite_msg || '邀请码不能为空'}
+        onInput={actions.onInput}
+      />
       <RegisterActions state={state} />
     </form>
   </div>

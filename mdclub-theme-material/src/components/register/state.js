@@ -15,6 +15,10 @@ export default {
   password: '',
   password_msg: '',
 
+  // 邀请码
+  invite: '',
+  invite_msg: '',
+
   // 图形验证码
   captcha_code: '',
   captcha_code_msg: '',
