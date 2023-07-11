@@ -1,6 +1,7 @@
 # 宝塔面板一键部署导入的 nginx 重写规则
 location / {
   if (!-e $request_filename){
+    rewrite ^/invite/(.*)$ /invite.php?code=$1 last;
     rewrite  ^(.*)$  /index.php?s=$1  last;   break;
   }
 }
