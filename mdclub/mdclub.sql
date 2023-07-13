@@ -340,3 +340,19 @@ CREATE TABLE IF NOT EXISTS `mc_vote` (
   KEY `voteable_id` (`votable_id`),
   KEY `create_time` (`create_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS `mc_invitecodes`;
+CREATE TABLE IF NOT EXISTS `mc_invitecodes` (
+  `code_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '邀请码编号',
+  `issuer_id` varchar(20) NOT NULL COMMENT '发出者ID',
+  `create_ip` varchar(80) DEFAULT NULL COMMENT '发出IP',
+  `code_hash` varchar(120) NOT NULL COMMENT '邀请码内容', -- 邀请码内容原则上事随机生成的
+  `create_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '注册时间',
+  `use_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '使用者ID',
+  `use_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '邀请码被使用时间',
+  PRIMARY KEY (`code_id`),
+  KEY `code_issuer` (`issuer_id`),
+  KEY `code_user` (`use_id`),
+  KEY `create_time` (`create_time`),
+  KEY `use_time` (`use_ime`),
+  KEY `code_hash` (`code_hash`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='邀请码表';
