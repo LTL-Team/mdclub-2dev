@@ -274,4 +274,14 @@ class User extends Abstracts implements FollowableInterface, GetableInterface
             ::where('user_id', $userId)
             ->update($data);
     }
+
+    /**
+     * 发出邀请码
+     * @param int $userId
+     * @param string $invitecode
+     */
+    public function invite(int $userid, array $invitecode)
+    {
+        //;
+    }
 }
